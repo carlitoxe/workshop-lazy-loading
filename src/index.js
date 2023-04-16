@@ -28,8 +28,7 @@ const createImageNode = () => {
         printLog();
         return container;
 }
-    
-//const newImage = createImageNode();
+
 const mountNode = document.getElementById('images'); //Access to HTML Element images
 
 const addButton = document.querySelector('#addButton');
