@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="https://carlitoxe.github.io/workshop-lazy-loading/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Web site created using create-snowpack-app"
+    />
+    <!--
+      Snowpack will replace https://carlitoxe.github.io/workshop-lazy-loading/ with the value you have for `baseUrl` in `snowpack.config.js`.
+      Make sure to update it with your GitHub Page URL. https://<your-username>.github.io/<your-repo-name>
+
+      More about config options:
+      - https://www.snowpack.dev/reference/configuration#buildoptions.baseurl
+    -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://carlitoxe.github.io/workshop-lazy-loading/_dist_/index.css"
+    />
+    <title>Random Fox - Lazy Loading</title>
+  </head>
+  <body>
+    <!--
+      This HTML file is a template.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+
+      Start modyfing from here.
+    -->
+    <div class="py-10 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <p
+          class="text-base leading-6 text-indigo-600 font-semibold tracking-wide uppercase"
+        >
+          Toxe
+        </p>
+        <h3
+          class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
+        >
+          Random Fox
+        </h3>
+        <p class="mt-4 max-w-2xl text-xl leading-7 text-gray-500 mx-auto">
+          The images added doesn't load until is visible on the viewport (screen).
+        </p>
+        <fieldset class="text-center">
+          <p class="p-3">
+          <legend class="mx-auto text-md text-gray-500">
+          Add new image to the end of the list.<br>
+          Note: Open the console to see the state of total images loaded using lazy loading
+          </legend>
+          </p>
+          <button type="submit" class="py-3 px-4 m-2 shadow-sm font-medium rounded-lg text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="addButton">Add new image</button><br>
+          <button type="reset" class="py-3 px-4 m-2 bg-red-800 text-white rounded-lg hover:bg-red-900" id="deleteButton">Delete image</button>
+          <button type="reset" class="py-3 px-8 m-2 bg-red-800 text-white rounded-lg hover:bg-red-900" id="clearButton">Clear all</button>
+        </fieldset>
+        <div id="images" class="flex flex-wrap justify-center gap-5 mt-8"></div>
+      </div>
+    </div>
+        <footer class="text-center mt-48 p-6 text-sm text-gray-600">
+      <p>
+        Powered by
+        <a href="https://randomfox.ca" target="_blank">https://randomfox.ca</a>
+        | Made by <a href="https://twitter.com/carlitoxee">@carlitoxee</a>
+      </p>
+    </footer>
+    <!-- Add more scripts here -->
+    <script>
+      let appendedImages = 0;
+      let loadedImages = 0;
+  
+      const printLog = () => {
+      console.log(`⚪ Se han agregado ${appendedImages} imágenes`);
+      console.log(`🟣 Se han cargado ${loadedImages} imágenes`);
+      console.log("---------------------------------------");
+      }
+    </script>
+    <script type="module" src="https://carlitoxe.github.io/workshop-lazy-loading/_dist_/index.js"></script>
+  </body>
+</html>
